@@ -1,0 +1,2 @@
+# ts-noob
+🌊 Typescript stuffs
