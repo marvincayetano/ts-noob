@@ -10,5 +10,5 @@ foo2 = foo; // Any can hold unknown
 foo = foo2; // Unknown can also hold any
 
 let newString: string = foo2; // Any can be assign to any types
-let newUnkown: string = foo; // Unknown can't be assigned to any types
+let newUnkown: unknown = bar2; // Unknown can't be assigned to any types
 let narrowedNewUnkown: string = foo as string; // Unless we narrow down the unknown to the same type
