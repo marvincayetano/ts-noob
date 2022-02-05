@@ -1,6 +1,7 @@
 // Generics
 // 'T' is going to be a type declared at run-time instead of compile time.
 // The T variable could be any non-declared variable (I couldn't find a reference, but I would assume any valid set of characters that could be used for a variable names).
+// Don't be scared of generics because it can be INFERED
 export class Lodash<T extends object> {
   constructor(private obj: T) {}
 
