@@ -4,6 +4,14 @@
 // Don't be scared of generics because it can be INFERED
 
 // Literal types are true, false, 100, "foo"
+
+// function example<T extends object>(arg: T) {}
+
+// // T will be `{ hello: string }`
+// example({
+//     hello: 'world'
+// });
+
 export class Lodash<T extends object> {
   constructor(private obj: T) {}
 
