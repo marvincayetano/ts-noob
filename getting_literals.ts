@@ -9,3 +9,16 @@ function example<
 example({
   hello: "world",
 });
+
+// Extract the literal sub-value:
+function example<
+  T extends { [key: string]: V },
+  V extends string,
+  // Moar generics!
+  K extends keyof T
+>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+// Returns "world"
+example({ hello: "world" }, "hello");
