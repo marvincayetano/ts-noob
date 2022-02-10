@@ -10,7 +10,7 @@ export class CdkWorkshopStack extends Stack {
     const hello = new lambda.Function(this, "HelloHandler", {
       runtime: lambda.Runtime.NODEJS_14_X, // Execution Environment - Basically what runs the code
       code: lambda.Code.fromAsset("lambda"), // Code inside the lambda folder
-      handler: "hello.handler", // Function inside the lambda folder files
+      handler: "hello.handler", // Name of the file function inside the lambda folder file
     });
   }
 }
