@@ -14,6 +14,10 @@ export class CdkWorkshopStack extends Stack {
       runtime: lambda.Runtime.NODEJS_14_X, // Execution Environment - Basically what runs the code
       code: lambda.Code.fromAsset("lambda"), // Code inside the lambda folder
       handler: "hello.handler", // Name of the file function inside the lambda folder file
+      environment: {
+        DOWNSTREAM_FUNCTION_NAME: props.downstream.functionName,
+        HITS_TABLE_NAME: table.tableName,
+      },
     });
 
     const helloWithCounter = new HitCounter(this, "HelloHitCounter", {
